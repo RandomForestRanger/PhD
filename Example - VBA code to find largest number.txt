@@ -1,3 +1,5 @@
+// Credit: DocMarti on SE. //
+
 Public Function MyCode(ByVal txt As String) As String
 Dim maxi As Double, db As Double
 maxi = -9 ^ 9
@@ -16,3 +18,4 @@ If ok = True Then
  MyCode = CStr(maxi)
 End If
 End Function
+
