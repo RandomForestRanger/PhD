@@ -1,0 +1,18 @@
+Public Function MyCode(ByVal txt As String) As String
+Dim maxi As Double, db As Double
+maxi = -9 ^ 9
+arr = Split(txt, ",")
+For Each a In arr
+  If InStr(a, "=") Then
+    a = Mid(a, InStr(a, "=") + 1)
+    ar = Replace(a, ".", Format(0, "."))
+    If IsNumeric(ar) Then
+        db = ar
+        If db > maxi Then maxi = db: ok = True
+    End If
+  End If
+Next a
+If ok = True Then
+ MyCode = CStr(maxi)
+End If
+End Function
